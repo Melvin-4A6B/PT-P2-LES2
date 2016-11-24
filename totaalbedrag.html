@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Totaal Bedrag Opdracht JS</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid bg">
+		<div class="form-group">
+			<label for="bedrag">Bedrag per stuk:</label>
+			<input type="number" name="bedrag" id="bedrag" class="form-control" placeholder="Bedrag per stuk">
+		</div>
+		<div class="form-group">
+			<label for="aantal">Aantal:</label>
+			<input type="number" name="aantal" id="aantal" class="form-control" placeholder="Aantal">
+		</div>
+		<div id="uitkomst"></div>
+		<input type="submit" name="submit" id="submit" class="btn btn-default" value="Bereken" onclick="bereken()">
+	</div>
+
+	<script>
+		function bereken() {
+			var bedrag = document.getElementById('bedrag').value;
+			var aantal = document.getElementById('aantal').value;
+			var uitkomst = bedrag * aantal;
+
+			document.getElementById('uitkomst').innerHTML = 'Totaal bedrag is: &euro; ' + uitkomst.toFixed(2);
+		}
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+</html>
