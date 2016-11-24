@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vierkant Opdracht JS</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid bg">
+		<div class="form-group">
+			<label for="breedte">Breedte:</label>
+			<input type="number" name="breedte" id="breedte" class="form-control" placeholder="Breedte in pixels">
+		</div>
+		<div class="form-group">
+			<label for="hoogte">Hoogte:</label>
+			<input type="number" name="hoogte" id="hoogte" class="form-control" placeholder="Hoogte in pixels">
+		</div>
+		<input type="submit" name="submit" id="submit" class="btn btn-default" value="Toon" onclick="toon()">
+		<br><br>
+		<div id="toon"></div>
+	</div>
+
+	<script>
+		function toon() {
+			var breedte = document.getElementById('breedte').value;
+			var hoogte = document.getElementById('hoogte').value;
+			var toon = breedte * hoogte;
+
+			document.getElementById('toon').style.width = toon + 'px';
+			document.getElementById('toon').style.height = toon + 'px';
+		}
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</body>
+</html>
