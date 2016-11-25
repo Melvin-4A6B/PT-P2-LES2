@@ -12,15 +12,15 @@
 	<div class="container-fluid bg">
 		<div class="form-group">
 			<label for="breedte">Breedte:</label>
-			<input type="number" name="breedte" id="breedte" class="form-control" placeholder="Breedte in pixels" onclick="kleur()">
+			<input type="number" name="breedte" id="breedte" class="form-control" placeholder="Breedte in pixels" oninput="kleur()">
 		</div>
 		<div class="form-group">
 			<label for="hoogte">Hoogte:</label>
-			<input type="number" name="hoogte" id="hoogte" class="form-control" placeholder="Hoogte in pixels" onclick="kleur()">
+			<input type="number" name="hoogte" id="hoogte" class="form-control" placeholder="Hoogte in pixels" oninput="kleur()">
 		</div>
 		<div class="form-group">
 			<label for="kleur">Kleur:</label>
-			<select class="btn btn-default" id="select" onclick="kleur()">
+			<select class="btn btn-default" id="select" oninput="kleur()">
 				<option value="red">Rood</option>
 				<option value="blue">Blauw</option>
 				<option value="yellow">Geel</option>
